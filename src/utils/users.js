@@ -56,7 +56,9 @@ const getUser = (id)=> {
 }
 
 const getUsersInRoom = (roomName)=>{
-    roomName = roomName.trim().toLowerCase();
+    if(roomName){
+        roomName = roomName.trim().toLowerCase();
+    }
     if(!roomName){
         return {
             error: "Provide a valid room name"
